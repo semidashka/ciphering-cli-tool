@@ -9,13 +9,21 @@ let cipherArr;
 
 
 function error1() {
-    console.log('Input error: Wrong configuration arguments.');
+    console.error('Input error: Wrong configuration arguments.');
+    console.log(' ');
     console.log('   Please, enter configuration arguments in the following format:')
+    console.log(' ');
     console.log('       node ciphering-cli-tool config "C1-C1-R0-A" -i "./input.txt" -o "./output.txt"');
+    console.log(' ');    
 }
 
 function error2() {
-    console.log('Input error: Configuration arguments are duplicated./n Please, enter configuration arguments in the following format:/n     node ciphering-cli-tool config "C1-C1-R0-A" -i "./input.txt" -o "./output.txt"');
+    console.error('Input error: Configuration arguments are duplicated.');
+    console.log(' ');
+    console.log('   Please, enter configuration arguments in the following format:')
+    console.log(' ');
+    console.log('       node ciphering-cli-tool config "C1-C1-R0-A" -i "./input.txt" -o "./output.txt"');
+    console.log(' ');
 }
 
 function configValid1() {
