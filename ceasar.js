@@ -39,6 +39,5 @@ export default function ceasar (message, XY) {
       }  
     }       
   }
-console.log(ciphered);
 return ciphered;
 }

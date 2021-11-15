@@ -25,7 +25,6 @@ export default function atbash (message) {
       }
     }  
   }
-  console.log(ciphered);
   return ciphered;
 }
 
