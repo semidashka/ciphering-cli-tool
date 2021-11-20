@@ -1,13 +1,33 @@
 import ceasar from './ceasar.js';
 import atbash from './atbash.js';
 import { inputFilePath, outputFilePath, cipherArr, configValid1 } from './config.js';
+import { exampleConfig, error, error1, FileError } from './errors.js';
 
 import fs from 'fs';
 import stream from 'stream';
-import util from 'util';
-import { URL } from 'url';
+import readline from 'readline';
+import { stdin, stdout } from 'process';
 
-configValid1();
+try {
+    configValid1();
+}
+catch (err) {
+    console.log(' ');
+    console.error(`${err.name}: ${err.message}`);    
+    exampleConfig();
+}  
+
+// console.log(inputFilePath);
+// console.log(outputFilePath);
+
+// const rl = readline.createInterface({ stdin, stdout });
+
+// const answer = await rl.question('What do you think of Node.js? ');
+
+// console.log(`Thank you for your valuable feedback: ${answer}`);
+
+// rl.close();
+
 
 function doCiphering(chunk, cipherArr) {
     let text = chunk.toString();
@@ -38,7 +58,9 @@ stream.pipeline(
         if (err) {
             throw new Error('An error occured in the process.');          
         } else {
-          console.log('Ciphering succesful!');
+            console.log(' ');      
+            console.log('Ciphering succesful!');
+            console.log(' ');  
         }
     }
-);   
+);  
