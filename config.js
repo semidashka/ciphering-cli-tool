@@ -1,6 +1,6 @@
 import fs from 'fs';
 import { URL } from 'url';
-import { error, error1, FileError } from './errors.js';
+import { error, error1, FileError } from './app-modules/errors.js';
 
 let inputFilePath;
 let outputFilePath;

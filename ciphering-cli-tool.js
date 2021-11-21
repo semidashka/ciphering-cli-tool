@@ -1,7 +1,7 @@
-import ceasar from './ceasar.js';
-import atbash from './atbash.js';
+import ceasar from './app-modules/ceasar.js';
+import atbash from './app-modules/atbash.js';
 import { inputFilePath, outputFilePath, cipherArr, configValid1 } from './config.js';
-import { exampleConfig, error, error1, FileError } from './errors.js';
+import { exampleConfig, error, error1, FileError } from './app-modules/errors.js';
 
 import fs from 'fs';
 import stream from 'stream';
@@ -27,7 +27,6 @@ catch (err) {
 // console.log(`Thank you for your valuable feedback: ${answer}`);
 
 // rl.close();
-
 
 function doCiphering(chunk, cipherArr) {
     let text = chunk.toString();
